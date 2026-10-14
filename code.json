@@ -19,7 +19,6 @@
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/GSA-SHARE-IT/gov-codejson",
-  "repositoryHost": "github.com/GSA-SHARE-IT",
   "repositoryVisibility": "public",
   "homepageURL": "",
   "downloadURL": "",
@@ -65,21 +64,5 @@
     "name": "CMS Open Source Team"
   },
   "feedbackMechanism": "https://github.com/GSA-SHARE-IT/gov-codejson/issues",
-  "AIUseCaseID": "0",
-  "localisation": false,
-  "repositoryType": "standards",
-  "userInput": false,
-  "fismaLevel": "low",
-  "group": "CMS/OA/DSAC",
-  "projects": [
-    "share-it-act"
-  ],
-  "systems": [],
-  "subsetInHealthcare": [
-    "operational"
-  ],
-  "userType": [
-    "government"
-  ],
-  "maturityModelTier": 3
+  "AIUseCaseID": "0"
 }
