@@ -8,7 +8,7 @@
 
 By harmonizing various standards, this opens up the opportunity to share our work not just on an agency level but also on a national and international level.
 
-The generic code.json schema can be found in the [`schemas` directory](../schemas/schema-2.0.0.json).
+The generic code.json schema can be found in the [`schemas` directory](../schemas/schema-0.1.0.json).
 
 ### Extending the schema for agency use
 
@@ -16,7 +16,7 @@ The generic schema is designed to be extensible, allowing agencies to add metada
 
 For example, CMS has their [own schema](../schemas/cms/) that includes new fields such as FISMA level, subset in healthcare, and systems.
 
-We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
 ### code.json Fields
 
@@ -80,6 +80,14 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td></td>
     </tr>
     <tr>
+      <td>identifier</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>str</td>
+      <td>Persistent unique ID; tracks assets across renames/migrations</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>version</td>
       <td>optional</td>
       <td>🇺🇸</td>
@@ -89,11 +97,19 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     </tr>
     <tr>
       <td>description</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>A one or two sentence description of the software.</td>
       <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The organization or component within the agency to which the releases listed belong.</td>
+      <td>Centers for Medicare & Medicaid Services, 18F, Navy</td>
     </tr>
     <tr>
       <td>status</td>
@@ -113,7 +129,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     </tr>
     <tr>
       <td>permissions/license/url <br> permissions/license/name</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
       <td>
@@ -127,7 +143,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
-      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)"
+      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByDisposableCode: The source code is disposable in nature, meaning it was written for a one-time or short-term purpose and is not intended to be reused or maintained; (12) exemptByExperimentalCode: The source code is solely exploratory in nature, including source code written by a developer experimenting with a new language or library, and is not intended for production or public reuse; (13) exemptByCommercialSoftware: The source code is commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software
       </td>
       <td>
         - openSource<br>
@@ -140,28 +156,26 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
         - exemptByTSA<br>
         - exemptByClassifiedInformation<br>
         - exemptByPrivacyRisk<br>
-        - exemptByIPRestriction<br>
-        - exemptByAgencySystem<br>
-        - exemptByAgencyMission<br>
-        - exemptByCIO<br>
-        - exemptByPolicyDate
+        - exemptByDisposableCode<br>
+        - exemptByExperimentalCode<br>
+        - exemptByCommercialSoftware<br>
       </td>
     </tr>
     <tr>
       <td>permissions/exemptionText</td>
-      <td>optional</td>
+      <td>conditional (only if exempted)</td>
       <td>🇺🇸📜</td>
       <td>str</td>
       <td>If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</td>
       <td></td>
     </tr>
     <tr>
-      <td>organization</td>
+      <td>reuseFrequency/forks <br> reuseFrequency/clones <br> reuseFrequency/downloads</td>
       <td>required</td>
-      <td>🇺🇸</td>
-      <td>str</td>
-      <td>The organization or component within the agency to which the releases listed belong.</td>
-      <td>Centers for Medicare & Medicaid Services, 18F, Navy</td>
+      <td>📜</td>
+      <td>obj</td>
+      <td>Measures frequency of code reuse in various forms</td>
+      <td></td>
     </tr>
     <tr>
       <td>repositoryURL</td>
@@ -216,7 +230,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     </tr>
     <tr>
       <td>vcs</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>Version control system used</td>
@@ -230,23 +244,15 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     </tr>
     <tr>
       <td>laborHours</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>int</td>
       <td>Labor hours invested in the project. Calculated through <a href="https://github.com/boyter/scc">COCOMO & SCC tool</a></td>
       <td></td>
     </tr>
     <tr>
-      <td>reuseFrequency/forks <br> reuseFrequency/clones</td>
-      <td>required</td>
-      <td>📜</td>
-      <td>obj</td>
-      <td>Measures frequency of code reuse in various forms</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>languages</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>arr</td>
       <td>Programming languages that make up the codebase</td>
@@ -275,7 +281,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     </tr>
     <tr>
       <td>SBOM</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM. If the software does not have a SBOM, enter 'None'. (i.e. Github provides an SBOM: https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)</td>
@@ -313,7 +319,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     </tr>
     <tr>
       <td>date/created <br> date/lastModified date/metadataLastUpdated</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
       <td>A date object describing the release</td>
@@ -321,7 +327,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     </tr>
     <tr>
       <td>tags</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🇺🇸</td>
       <td>arr</td>
       <td>Topics and keywords associated with the project to improve search and discoverability</td>
@@ -347,17 +353,18 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     </tr>
     <tr>
       <td>AIUseCaseID</td>
-      <td>required</td>
+      <td>optional</td>
       <td>🌐</td>
       <td>str</td>
       <td>The software's ID in the AI Use Case Inventory. If the software is not currently listed in the inventory, enter '0'</td>
       <td>
       </td>
     </tr>
+
   </tbody>
 </table>
 
-Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
+Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
 
 ### CMS code.json Fields
 
@@ -416,6 +423,14 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td></td>
     </tr>
     <tr>
+      <td>identifier</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>str</td>
+      <td>Persistent unique ID; tracks assets across renames/migrations</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>version</td>
       <td>optional</td>
       <td>🇺🇸</td>
@@ -438,6 +453,14 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td>str</td>
       <td>Provide longer description of the software, between 150 and 10000 chars. It is meant to provide an overview of the capabilities of the software for a potential user.</td>
       <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The organization or component within the agency to which the releases listed belong.</td>
+      <td>Centers for Medicare & Medicaid Services</td>
     </tr>
     <tr>
       <td>status</td>
@@ -471,7 +494,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
-      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)"</td>
+      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByDisposableCode: The source code is disposable in nature, meaning it was written for a one-time or short-term purpose and is not intended to be reused or maintained (e.g., a throwaway script or one-off utility); (12) exemptByExperimentalCode: The source code is solely exploratory in nature, including source code written by a developer experimenting with a new language or library, and is not intended for production or public reuse; (13) exemptByCommercialSoftware: The source code is commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software</td>
       <td>
         - openSource<br>
         - governmentWideReuse<br>
@@ -483,28 +506,26 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
         - exemptByTSA<br>
         - exemptByClassifiedInformation<br>
         - exemptByPrivacyRisk<br>
-        - exemptByIPRestriction<br>
-        - exemptByAgencySystem<br>
-        - exemptByAgencyMission<br>
-        - exemptByCIO<br>
-        - exemptByPolicyDate
+        - exemptByDisposableCode<br>
+        - exemptByExperimentalCode<br>
+        - exemptByCommercialSoftware<br>
       </td>
     </tr>
     <tr>
       <td>permissions/exemptionText</td>
-      <td>optional</td>
+      <td>conditional (only if exempted)</td>
       <td>🇺🇸📜</td>
       <td>str</td>
       <td>If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</td>
       <td></td>
     </tr>
     <tr>
-      <td>organization</td>
+      <td>reuseFrequency/forks <br> reuseFrequency/clones <br> reuseFrequency/downloads</td>
       <td>required</td>
-      <td>🇺🇸</td>
-      <td>str</td>
-      <td>The organization or component within the agency to which the releases listed belong.</td>
-      <td>Centers for Medicare & Medicaid Services</td>
+      <td>📜</td>
+      <td>obj</td>
+      <td>Measures frequency of code reuse in various forms</td>
+      <td></td>
     </tr>
     <tr>
       <td>repositoryURL</td>
@@ -593,14 +614,6 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td>🇺🇸</td>
       <td>int</td>
       <td>Labor hours invested in the project. Calculated through <a href="https://github.com/boyter/scc">COCOMO & SCC tool</a></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>reuseFrequency/forks <br> reuseFrequency/clones</td>
-      <td>required</td>
-      <td>📜</td>
-      <td>obj</td>
-      <td>Measures frequency of code reuse in various forms</td>
       <td></td>
     </tr>
     <tr>
@@ -872,8 +885,8 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
   </tbody>
 </table>
 
-Full schema can be found in [schema-2.1.0.json](../schemas/cms/schema-2.1.0.json).
+Full schema can be found in [schema-2.2.0.json](../schemas/cms/schema-2.2.0.json).
 
 ### Adding new metadata fields
 
-For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/gov-codejson/issues/new?template=metadata-field-addition.md).
