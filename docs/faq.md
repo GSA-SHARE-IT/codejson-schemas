@@ -39,7 +39,9 @@ There are [4 exemptions](https://www.congress.gov/bill/118th-congress/house-bill
 Yes. All custom-developed code—whether it involves software applications, data analysis, infrastructure/devops, interoperability, or internal tools/scripts—must reside in a repository, unless it qualifies for one of the [four exemptions](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih#HB45699B7E8734166BE2F6DA2A80F7909).
 
 ### When do agencies have to comply?
+
 The SHARE IT Act applies to custom-developed code created on or after July 21, 2025 where agencies must:
+
 - store custom-developed code in a repository
 - ensure code is accessible to federal employees and is owned by the agency
 - publish metadata on all custom-developed code
@@ -66,11 +68,11 @@ As per the SHARE IT Act, agencies are required to publish metadata on all custom
 
 ### I have feedback on additions and improvements to the code.json metadata standard. Where can I share this?
 
-We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
 
 ### My agency extended the code.json schema to add more metadata fields. Where can I share this?
 
-We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
 ### Does `laborHours` need to be down-to-the-minute accurate?
 

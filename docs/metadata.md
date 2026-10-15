@@ -16,7 +16,7 @@ The generic schema is designed to be extensible, allowing agencies to add metada
 
 For example, CMS has their [own schema](../schemas/cms/) that includes new fields such as FISMA level, subset in healthcare, and systems.
 
-We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
 ### code.json Fields
 
@@ -889,4 +889,4 @@ Full schema can be found in [schema-2.2.0.json](../schemas/cms/schema-2.2.0.json
 
 ### Adding new metadata fields
 
-For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/gov-codejson/issues/new?template=metadata-field-addition.md).
+For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
