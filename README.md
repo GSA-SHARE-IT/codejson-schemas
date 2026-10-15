@@ -22,7 +22,7 @@ This repository serves as the single source of truth for all code.json schemas. 
 
 To ensure tools in the SHARE IT Act stack utilize the latest schemas:
 
-- `syncSchemas.yml` workflow syncs the schemas in [codejson-generator](https://github.com/GSA-SHARE-IT/codejson-generator)
+- `syncSchemas.yml` workflow syncs the schemas in [codejson-form](https://github.com/GSA-SHARE-IT/codejson-form)
 - [codejson-core](https://github.com/DSACMS/codejson-core) contains a script that pulls the schemas from the codejson-schemas repository (this repository!) and then it serves as the upstream for the rest of the tools that needs code.json
 
 ### Project Vision
