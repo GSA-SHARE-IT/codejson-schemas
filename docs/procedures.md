@@ -16,7 +16,7 @@ The CMS Open Source Program Office developed various tools that can automate det
 
 [Generate an agency-index.json file for submission](#generate-an-agency-indexjson-file-for-agencies)
 
-- [codejson-index-generator](#using-codejson-index-generator)
+- [codejson-index](#using-codejson-index)
 
 [Tools created by other teams and agencies](#tools-created-by-other-teams-and-agencies)
 
@@ -101,7 +101,7 @@ This action will create a pull request to add or update a compliant code.json fi
 
 ## Generate an agency-index.json file for agencies
 
-### Using codejson-index-generator
+### Using codejson-index
 
 The [codejson-index](https://github.com/GSA-SHARE-IT/codejson-index) is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file.
 

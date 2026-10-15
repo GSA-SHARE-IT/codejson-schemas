@@ -9,8 +9,8 @@ To create an agency-index.json:
 1. Identify GitHub organizations and other platforms where source code is hosted
 2. Generate the agency-index.json using the tools below. Learn more about usage in [procedures.md](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/docs/procedures.md#generate-an-agency-indexjson-file-for-agencies)
 
-- [index-generator-website](https://gsa-share-it.github.io/codejson-index/)
-- [index-generator python tool](https://github.com/GSA-SHARE-IT/codejson-index)
+- [codejson-index website](https://gsa-share-it.github.io/codejson-index/)
+- [codejson-index python tool](https://github.com/GSA-SHARE-IT/codejson-index)
 
 3. Provide the index at:
 
