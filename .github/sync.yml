@@ -1,0 +1,5 @@
+GSA-SHARE-IT/codejson-generator:
+  - source: ./schemas/schema-0.1.0.json
+    dest: ./schemas/gov/schema.json
+  - source: ./schemas/cms/schema-2.2.0.json
+    dest: ./schemas/cms/schema.json

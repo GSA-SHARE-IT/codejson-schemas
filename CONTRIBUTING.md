@@ -21,7 +21,7 @@ We are open to adding more fields to maximal schema of government-wide code.json
 
 ### Team Specific Guidelines
 
-The project is led by the CMS Open Source Program Office team as detailed in [COMMUNITY.md](/COMMUNITY.md).
+The project is managed by the Federal SHARE IT Act Working Group as detailed in [COMMUNITY.md](/COMMUNITY.md).
 
 ### Building dependencies
 
@@ -98,7 +98,7 @@ Some important notes regarding the summary line:
 
 ## Reviewing Pull Requests
 
-Pull requests will be reviewed by the CMS Open Source Program Office team as detailed in [COMMUNITY.md](/COMMUNITY.md)
+Pull requests will be reviewed by the Federal SHARE IT Act Working Group as detailed in [COMMUNITY.md](/COMMUNITY.md)
 
 <!--
 ## Shipping Releases
