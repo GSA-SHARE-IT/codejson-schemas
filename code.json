@@ -1,5 +1,6 @@
 {
   "name": "gov-codejson",
+  "identifier": "gov-codejson",
   "version": "2.0.0",
   "description": "CMS code.json: An agency-wide metadata standard for software projects",
   "longDescription": "This repository contains documentation on code.json, a metadata standard used to collect information on agency software projects in compliance with M-16-21 and the SHARE IT Act.",
@@ -8,7 +9,7 @@
     "licenses": [
       {
         "name": "CC0-1.0",
-        "URL": "https://github.com/DSACMS/gov-codejson/blob/main/LICENSE"
+        "URL": "https://github.com/GSA-SHARE-IT/gov-codejson/blob/main/LICENSE"
       }
     ],
     "usageType": [
@@ -17,8 +18,7 @@
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
-  "repositoryURL": "https://github.com/DSACMS/gov-codejson",
-  "repositoryHost": "github.com/DSACMS",
+  "repositoryURL": "https://github.com/GSA-SHARE-IT/gov-codejson",
   "repositoryVisibility": "public",
   "homepageURL": "",
   "downloadURL": "",
@@ -41,7 +41,7 @@
   "languages": [],
   "maintenance": "community",
   "contractNumber": [],
-  "SBOM": "https://github.com/DSACMS/gov-codejson/network/dependencies",
+  "SBOM": "https://github.com/GSA-SHARE-IT/gov-codejson/network/dependencies",
   "relatedCode": [],
   "reusedCode": [],
   "partners": [],
@@ -63,22 +63,6 @@
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Team"
   },
-  "feedbackMechanism": "https://github.com/DSACMS/gov-codejson/issues",
-  "AIUseCaseID": "0",
-  "localisation": false,
-  "repositoryType": "standards",
-  "userInput": false,
-  "fismaLevel": "low",
-  "group": "CMS/OA/DSAC",
-  "projects": [
-    "share-it-act"
-  ],
-  "systems": [],
-  "subsetInHealthcare": [
-    "operational"
-  ],
-  "userType": [
-    "government"
-  ],
-  "maturityModelTier": 3
+  "feedbackMechanism": "https://github.com/GSA-SHARE-IT/gov-codejson/issues",
+  "AIUseCaseID": "0"
 }

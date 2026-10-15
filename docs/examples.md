@@ -2,7 +2,7 @@
 
 Below are examples of well-structured and comprehensive metadata in CMS code.json files. These examples demonstrate best practices for repository-level metadata documentation.
 
-For additional reference, the [tests directory](../schemas/tests) contain unit tests of code.json files from various DSACMS repositories. These tests help ensure consistency and compliance as we make future updates to the schemas.
+For additional reference, the [tests directory](../schemas/tests) contain unit tests of code.json files from various repositories. These tests help ensure consistency and compliance as we make future updates to the schemas.
 
 We encourage you to review these examples and tests when creating or updating your repository-level code.json file to maintain consistency with federal standards.
 
@@ -18,8 +18,8 @@ The CMS Metrics Website is a [tier 3](https://github.com/DSACMS/repo-scaffolder/
 
 Link to code.json file: [codejson-example-metrics.json](https://github.com/DSACMS/gov-codejson/blob/main/tests/examples/codejson-example-metrics.json)
 
-## Example 3: [gov-codejson](https://github.com/DSACMS/gov-codejson)
+## Example 3: [gov-codejson](https://github.com/GSA-SHARE-IT/gov-codejson)
 
-gov-codejson (this repository!) is a [tier 3](https://github.com/DSACMS/repo-scaffolder/blob/dev/maturity-model-tiers.md#tier-information) project containing documentation on the code.json metadata standard, currently maintained by the federal government community.
+gov-codejson (this repository!) is a [tier 3](https://github.com/GSA-SHARE-IT/repo-scaffolder/blob/dev/maturity-model-tiers.md#tier-information) project containing documentation on the code.json metadata standard, currently maintained by the federal government community.
 
-Link to code.json file: [code.json](https://github.com/DSACMS/gov-codejson/blob/main/code.json)
+Link to code.json file: [code.json](https://github.com/GSA-SHARE-IT/gov-codejson/blob/main/code.json)
