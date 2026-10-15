@@ -11,8 +11,19 @@ This repository contains documentation on code.json, a metadata standard used to
 - [schemas](./schemas): code.json generic schema and agency-level schemas
 - [procedures.md](./docs/procedures.md): Procedures and tools on creating and updating metadata
 - [examples.md](./docs/examples.md): Good examples of metadata in current agency code.json files
-
 - [faq.md](./docs/faq.md): Frequently Asked Questions
+
+## Schemas and Handling Updates
+
+This repository serves as the single source of truth for all code.json schemas. Currently, the latest versions of the code.json schemas are:
+
+- Government-wide schema: [v0.1.0 found in schemas/schema-0.1.0.json](./schemas/schema-0.1.0.json)
+- CMS schema: [v2.2.0 found in schemas/cms](./schemas/cms/schema-2.2.0.json)
+
+To ensure tools in the SHARE IT Act stack utilize the latest schemas:
+
+- `syncSchemas.yml` workflow syncs the schemas in [codejson-generator](https://github.com/GSA-SHARE-IT/codejson-generator)
+- [codejson-core](https://github.com/DSACMS/codejson-core) contains a script that pulls the schemas from gov-codejson and then it serves as the upstream for the rest of the tools that needs code.json
 
 ### Project Vision
 
@@ -51,9 +62,9 @@ An up-to-date list of core team members can be found in [COMMUNITY.md](COMMUNITY
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md): Guidelines for contributing to the project
 - [COMMUNITY.md](./COMMUNITY.md) & [CODEOWNERS.md](./.github/CODEOWNERS.md): Core team information and guidelines for community participation
-- [GOVERNANCE.md](./GOVERNANCE.md) - Project governance information
-- [SECURITY.md](./SECURITY.md) - Security and vulnerability disclosure policies
-- [LICENSE](./LICENSE) - CC0 1.0 Universal public domain dedication
+- [GOVERNANCE.md](./GOVERNANCE.md): Project governance information
+- [SECURITY.md](./SECURITY.md): Security and vulnerability disclosure policies
+- [LICENSE](./LICENSE): CC0 1.0 Universal public domain dedication
 
 # Development and Software Delivery Lifecycle
 
