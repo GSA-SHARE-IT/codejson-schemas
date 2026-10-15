@@ -128,7 +128,7 @@
         },
         "reuseFrequency": {
             "type": "object",
-            "description": "Measures frequency of code reuse in various forms. (e.g. forks, downloads, clones)",
+            "description": "Measures frequency of code reuse in various forms such as forks and clones for repositories, and downloads for packaged and distributed software",
             "properties": {
                 "forks": {
                     "type": "integer",

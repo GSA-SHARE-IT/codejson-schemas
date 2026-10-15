@@ -174,7 +174,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>📜</td>
       <td>obj</td>
-      <td>Measures frequency of code reuse in various forms</td>
+      <td>Measures frequency of code reuse in various forms such as forks and clones for repositories, and downloads for packaged and distributed software</td>
       <td></td>
     </tr>
     <tr>
@@ -524,7 +524,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>📜</td>
       <td>obj</td>
-      <td>Measures frequency of code reuse in various forms</td>
+      <td>Measures frequency of code reuse in various forms such as forks and clones for repositories, and downloads for packaged and distributed software</td>
       <td></td>
     </tr>
     <tr>
