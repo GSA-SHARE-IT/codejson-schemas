@@ -1,6 +1,6 @@
 {
-  "name": "gov-codejson",
-  "identifier": "gov-codejson",
+  "name": "codejson-schemas",
+  "identifier": "codejson-schemas",
   "version": "2.0.0",
   "description": "CMS code.json: An agency-wide metadata standard for software projects",
   "longDescription": "This repository contains documentation on code.json, a metadata standard used to collect information on agency software projects in compliance with M-16-21 and the SHARE IT Act.",
@@ -9,7 +9,7 @@
     "licenses": [
       {
         "name": "CC0-1.0",
-        "URL": "https://github.com/GSA-SHARE-IT/gov-codejson/blob/main/LICENSE"
+        "URL": "https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/LICENSE"
       }
     ],
     "usageType": [
@@ -18,7 +18,7 @@
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
-  "repositoryURL": "https://github.com/GSA-SHARE-IT/gov-codejson",
+  "repositoryURL": "https://github.com/GSA-SHARE-IT/codejson-schemas",
   "repositoryVisibility": "public",
   "homepageURL": "",
   "downloadURL": "",
@@ -41,7 +41,7 @@
   "languages": [],
   "maintenance": "community",
   "contractNumber": [],
-  "SBOM": "https://github.com/GSA-SHARE-IT/gov-codejson/network/dependencies",
+  "SBOM": "https://github.com/GSA-SHARE-IT/codejson-schemas/network/dependencies",
   "relatedCode": [],
   "reusedCode": [],
   "partners": [],
@@ -63,6 +63,6 @@
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Team"
   },
-  "feedbackMechanism": "https://github.com/GSA-SHARE-IT/gov-codejson/issues",
+  "feedbackMechanism": "https://github.com/GSA-SHARE-IT/codejson-schemas/issues",
   "AIUseCaseID": "0"
 }
