@@ -15,9 +15,9 @@ If you would like to comment and provide feedback on the metadata standard, plea
 
 ### For agencies
 
-We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
-We are open to adding more fields to maximal schema of government-wide code.json standard for any metadata the government sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We are open to adding more fields to maximal schema of government-wide code.json standard for any metadata the government sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
 
 ### Team Specific Guidelines
 
@@ -39,9 +39,9 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 2.  Check out the `main` branch
 3.  Create a feature branch
 4.  Write changes
-5.  From your branch, make a pull request against `DSACMS/gov-codejson/main`
+5.  From your branch, make a pull request against `GSA-SHARE-IT/codejson-schemas/main`
 6.  Work with repo maintainers to get your change reviewed
-7.  Wait for your change to be pulled into `DSACMS/gov-codejson/main`
+7.  Wait for your change to be pulled into `GSA-SHARE-IT/codejson-schemas/main`
 8.  Delete your feature branch
 
 ### Testing Conventions
@@ -58,7 +58,7 @@ If you would like to comment on the metadata standard, please let us know by fil
 
 #### For agencies
 
-We are open to adding more fields to maximal schema of government-wide code.json standard for any metadata the government sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We are open to adding more fields to maximal schema of government-wide code.json standard for any metadata the government sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
 
 ### Writing Pull Requests
 

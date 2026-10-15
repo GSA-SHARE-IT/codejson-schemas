@@ -1,4 +1,4 @@
-# gov-codejson
+# codejson-schemas
 
 code.json: An agency-wide metadata standard for software projects
 
@@ -22,8 +22,8 @@ This repository serves as the single source of truth for all code.json schemas. 
 
 To ensure tools in the SHARE IT Act stack utilize the latest schemas:
 
-- `syncSchemas.yml` workflow syncs the schemas in [codejson-generator](https://github.com/GSA-SHARE-IT/codejson-generator)
-- [codejson-core](https://github.com/DSACMS/codejson-core) contains a script that pulls the schemas from gov-codejson and then it serves as the upstream for the rest of the tools that needs code.json
+- `syncSchemas.yml` workflow syncs the schemas in [codejson-form](https://github.com/GSA-SHARE-IT/codejson-form)
+- [codejson-core](https://github.com/DSACMS/codejson-core) contains a script that pulls the schemas from the codejson-schemas repository (this repository!) and then it serves as the upstream for the rest of the tools that needs code.json
 
 ### Project Vision
 
@@ -75,7 +75,7 @@ The following guide is for members of the project team who have access to the re
 Clone the project to update the documentation files. Send a PR for review.
 
 ```
-git clone https://github.com/DSACMS/gov-codejson
+git clone https://github.com/GSA-SHARE-IT/codejson-schemas
 ```
 
 ## Coding Style and Linters
@@ -106,7 +106,7 @@ The contents of this repository are managed by the CMS Open Source Program Offic
 
 ## Community
 
-The gov-codejson team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
+The codejson-schemas team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
 
 We know that we can learn from a wide variety of communities, including those who will use or will be impacted by the tool, who are experts in technology, or who have experience with similar technologies deployed in other spaces. We are dedicated to creating forums for continuous conversation and feedback to help shape the design and development of the tool.
 
@@ -116,16 +116,15 @@ We also recognize capacity building as a key part of involving a diverse open so
 
 Principles and guidelines for participating in our open source community are can be found in [COMMUNITY.md](COMMUNITY.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events.
 
-<!--
 ## Governance
-Information about how the gov-codejson community is governed may be found in [GOVERNANCE.md](GOVERNANCE.md).
--->
+
+Information about how the codejson-schemas community is governed may be found in [GOVERNANCE.md](GOVERNANCE.md).
 
 ## Feedback
 
 If you would like to comment on the metadata standard, please let us know by filing an **issue on our GitHub repository.**
 
-We are open to adding more CMS fields to code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We are open to adding more CMS fields to code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
 
 If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at opensource@cms.hhs.gov.
 
@@ -147,7 +146,7 @@ For more information about our Security, Vulnerability, and Responsible Disclosu
 
 A Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software.
 
-In the spirit of [Executive Order 14028 - Improving the Nation’s Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/DSACMS/gov-codejson/network/dependencies.
+In the spirit of [Executive Order 14028 - Improving the Nation’s Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/GSA-SHARE-IT/codejson-schemas/network/dependencies.
 
 For more information and resources about SBOMs, visit: https://www.cisa.gov/sbom.
 

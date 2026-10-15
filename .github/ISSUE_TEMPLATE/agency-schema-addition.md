@@ -8,14 +8,15 @@ assignees: natalialuzuriaga
 
 ## Request - Add Agency Schema
 
-This issue serves as a request to add an agency's extended code.json schema to the repository. For more information, please visit: https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md#extending-the-schema-for-agency-use
+This issue serves as a request to add an agency's extended code.json schema to the repository. For more information, please visit: https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/docs/metadata.md#extending-the-schema-for-agency-use
 
 ### Agency
+
 What agency is this for?
 
 ### New Fields in Extended Schema
 
-Fill out the information below on the fields of your agency's extended code.json schema. Please refer to the structure of the code.json fields found here: https://github.com/DSACMS/gov-codejson/blob/main/schemas/schema-1.0.0.json
+Fill out the information below on the fields of your agency's extended code.json schema. Please refer to the structure of the code.json fields found here: https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/schema-0.1.0.json
 
 ```
 "key-name-here": {
@@ -25,4 +26,3 @@ Fill out the information below on the fields of your agency's extended code.json
 ```
 
 Provide example values here:
-
