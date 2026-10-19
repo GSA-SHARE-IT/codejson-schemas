@@ -67,6 +67,8 @@ Initial generic (government-wide) `code.json` schema (`draft-04`). Known issues,
 ### CMS Schema
 
 ### [2.2.0](/schemas/cms/schema-2.2.0.json)
+> [!IMPORTANT]  
+> This is the latest up-to-date schema that reflects recent government policy updates (the SHARE IT Act).
 
 #### Added
 
