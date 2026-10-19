@@ -1,5 +1,3 @@
-# Frequently Asked Questions (FAQs)
-
 ## Policies
 
 ### What is the Federal Source Code Policy / M-16-21?
@@ -19,8 +17,6 @@ The SHARE IT Act of 2024 is legislation designed to enhance transparency, collab
 - Standardized reporting on software development and licensing practices.
 - Establishment of metadata guidelines to ensure clear documentation and discoverability of software assets.
 
-Learn more at: https://dsacms.github.io/share-it-act-lp/
-
 ### Does the SHARE IT Act also apply retroactively to previous custom-developed code?
 
 No. The SHARE IT Act applies only to custom-developed code created on or after July 21, 2025. Code developed prior to this date is not subject to its requirements, however, code created after August 8, 2016 is subject to the Federal Source Code Policy.
@@ -33,6 +29,8 @@ There are [4 exemptions](https://www.congress.gov/bill/118th-congress/house-bill
 2. Source code developed by an agency, or part of an agency, that is an element of the intelligence community
 3. Source code that is exempted from the Freedom of Information Act
 4. Source code exempted by the agency’s CIO
+
+Additionally, the SHARE IT Act does not include source code that is solely exploratory or disposable in nature, including source code written by a developer experimenting with a new language or library as well as commercial computer software, commercial off-the-shelf software, or configuration scripts for such software.
 
 ### Does SHARE IT Act apply to data analysis code?
 
@@ -66,14 +64,69 @@ Yes. As per M-16-21, agencies are required to publish metadata on all custom-dev
 
 As per the SHARE IT Act, agencies are required to publish metadata on all custom-developed code after July 22, 2025, which is not subject to exemptions (see: [SHARE IT ACT exemptions](https://www.congress.gov/118/plaws/publ187/PLAW-118publ187.pdf)).
 
+### Is there a way to automate filling out the code.json file or do I have to manually do the work?
+
+Our tools offer various ways to automate code.json data population:
+
+1. [codejson-action](https://github.com/GSA-SHARE-IT/codejson-action)
+
+This GitHub Action populates 21 code.json fields using the GitHub API:
+
+- `name`
+- `version`
+- `description`
+- `status`
+- `license.name`, `license.URL`
+- `organization`
+- `repositoryURL`
+- `repositoryVisibility`
+- `homepageURL`
+- `vcs`
+- `reuseFrequency.forks`
+- `reuseFrequency.clones`
+- `languages`
+- `SBOM`
+- `date.created`, `date.lastModified`, `date.metadataLastUpdated`
+- `tags`
+- `contact.email`
+- `feedbackMechanism`
+
+2. [codejson-form](https://gsa-share-it.github.io/codejson-forn/)
+
+In step 2 of the form, click the `Enhance with AI` button to use a LLM to populate the rest of the code.json fields based on scanning the contents of the repository. Be sure to review each value for correctness and accuracy before generating your code.json file.
+
+Visit the [Procedures page](https://gsa-share-it.github.io/site/schema/procedures/#using-codejson-form) and [Metadata page](https://gsa-share-it.github.io/site/schema) for more information on the automation options above.
+
+### Which metadata fields require human judgment, and who should be responsible for completing them?
+
+- `contractNumber` is a required field that links the software with its corresponding contract. The Contracting Officer Representative (COR) of the project should have this information
+- Fields describing repository contents such as `description`, `status`, `languages`, and `tags` should be handled by development team.
+
 ### I have feedback on additions and improvements to the code.json metadata standard. Where can I share this?
 
 We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
 
 ### My agency extended the code.json schema to add more metadata fields. Where can I share this?
 
-We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
 ### Does `laborHours` need to be down-to-the-minute accurate?
 
 The goal is to be as accurate as we can, and with as little burden as possible. We strive to automate labor hour calculations for public repositories whenever possible (using the [scc](https://github.com/boyter/scc) tool), but manual ballpark estimates are acceptable when precise calculation isn't feasible.
+
+## SHARE IT Act Compliance & Implementation
+
+### Where should an agency begin if it does not yet have a complete inventory of its repositories?
+
+We recommend an agency use the Repository Discovery form as a starting point to collect source code repository information across the organization. It is an intake form that serves as a simple registry for gathering basic information about a source code repository. Responses can be used by the agency to coordinate with repository managers and owners to comply with the SHARE IT Act.
+
+### Can an agency build a shared software inventory across GitHub, GitLab, Azure DevOps, and other version control systems?
+
+Yes, the Repository Discovery form is a way for the agency to collect and compile various source code hosting platforms used throughout the organization.
+
+### Can the software inventory support additional agency needs, such as identifying AI use cases?
+
+Yes! code.json is designed to be extensible where additionalProperties can be added to the schema. Fields to support additional needs include:
+
+- `AIUseCaseID` is the software's ID in the AI Use Case Inventory as part of M-25-21 compliance.
+- `SBOM` is a link to the software's SBOM as part of EO14028.

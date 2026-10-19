@@ -1,5 +1,3 @@
-# Exemptions
-
 ## [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih) Exemptions
 
 ### Sign off on risk acceptance of open-sourcing the software product
@@ -38,7 +36,7 @@ Before outbounding repositories, it’s important that the appropriate stakehold
 
 #### Disposable, Experimental and Commercial Software
 
-- [ ] I acknowledge that the source is **NOT**:
+- [ ] I acknowledge that the source code is **NOT**:
   - [ ] disposable in nature, meaning it was written for a one-time or short-term purpose and is not intended to be reused or maintained
   - [ ] solely exploratory in nature, including source code written by a developer experimenting with a new language or library
   - [ ] commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software
