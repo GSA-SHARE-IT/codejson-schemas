@@ -2,7 +2,7 @@
 
 The CMS Open Source Program Office developed various tools that can automate detecting, adding, and updating metadata to repositories.
 
-> **Learn more about our SHARE IT Act tools**: https://dsacms.github.io/share-it-act-lp/
+> **Learn more about our SHARE IT Act tools**: https://gsa-share-it.github.io/site/
 
 **Procedures for Project Teams**:
 
@@ -29,7 +29,7 @@ The CMS Open Source Program Office developed various tools that can automate det
 
 _This method works best for all repositories on all platforms._
 
-Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-form.
+Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://gsa-share-it.github.io/codejson-form.
 
 ### Using codejson-action
 

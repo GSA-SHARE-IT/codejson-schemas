@@ -1,5 +1,17 @@
-GSA-SHARE-IT/codejson-generator:
+GSA-SHARE-IT/codejson-form:
   - source: ./schemas/schema-0.1.0.json
     dest: ./schemas/gov/schema.json
   - source: ./schemas/cms/schema-2.2.0.json
     dest: ./schemas/cms/schema.json
+
+GSA-SHARE-IT/site:
+  - source: docs/metadata.md
+    dest: content/schema/index.md
+  - source: docs/faq.md
+    dest: content/schema/faq.md
+  - source: docs/exemptions.md
+    dest: content/schema/exemptions.md
+  - source: docs/procedures.md
+    dest: content/schema/procedures.md
+  - source: docs/agency-index.md
+    dest: content/schema/agency.md
