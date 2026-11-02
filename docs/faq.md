@@ -91,7 +91,7 @@ This GitHub Action populates 21 code.json fields using the GitHub API:
 - `contact.email`
 - `feedbackMechanism`
 
-2. [codejson-form](https://gsa-share-it.github.io/codejson-forn/)
+2. [codejson-form](https://gsa-share-it.github.io/codejson-form/)
 
 In step 2 of the form, click the `Enhance with AI` button to use a LLM to populate the rest of the code.json fields based on scanning the contents of the repository. Be sure to review each value for correctness and accuracy before generating your code.json file.
 
