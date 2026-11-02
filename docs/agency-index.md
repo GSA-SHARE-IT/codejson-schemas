@@ -38,27 +38,6 @@ To create an agency-index.json:
       <td></td>
     </tr>
     <tr>
-      <td>measurementType/method</td>
-      <td>required</td>
-      <td>str</td>
-      <td>An enumerated list of methods for measuring the open source requirement.</td>
-      <td>
-        - linesOfCode<br>
-        - modules<br>
-        - cost<br>
-        - projects<br>
-        - systems<br>
-        - other<br>
-      </td>
-    </tr>
-    <tr>
-      <td>measurementType/ifOther</td>
-      <td>optional</td>
-      <td>str</td>
-      <td>A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>releases</td>
       <td>required</td>
       <td>array</td>
