@@ -8,15 +8,15 @@
 
 By harmonizing various standards, this opens up the opportunity to share our work not just on an agency level but also on a national and international level.
 
-The generic code.json schema can be found in the [`schemas` directory](../schemas/schema-0.1.0.json).
+The generic code.json schema can be found in the [`schemas` directory](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/schema-0.1.0.json).
 
 ### Extending the schema for agency use
 
-The generic schema is designed to be extensible, allowing agencies to add metadata fields that are relevant to their specific needs.
+The generic schema is designed to be extensible, allowing agencies to add metadata fields that are relevant to their specific software inventorying needs.
 
-For example, CMS has their [own schema](../schemas/cms/) that includes new fields such as FISMA level, subset in healthcare, and systems.
+For example, CMS has their [own schema](https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas/cms) that includes new fields such as FISMA level, subset in healthcare, and systems.
 
-We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
 ### code.json Fields
 
@@ -59,6 +59,8 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
   </tbody>
 </table>
 
+A checkmark (✅) in the _Automated_ column indicates a field populated through the GitHub API by [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator).
+
 <table>
   <thead>
     <tr>
@@ -66,6 +68,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <th>Presence</th>
       <th>Source</th>
       <th>Type</th>
+      <th>Automated</th>
       <th>Description</th>
       <th>Options/Examples</th>
     </tr>
@@ -76,6 +79,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>str</td>
+      <td>✅</td>
       <td>Name of the project or software</td>
       <td></td>
     </tr>
@@ -84,6 +88,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>📜</td>
       <td>str</td>
+      <td></td>
       <td>Persistent unique ID; tracks assets across renames/migrations</td>
       <td></td>
     </tr>
@@ -92,6 +97,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>The version for this release</td>
       <td></td>
     </tr>
@@ -100,6 +106,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>A one or two sentence description of the software.</td>
       <td></td>
     </tr>
@@ -108,6 +115,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>The organization or component within the agency to which the releases listed belong.</td>
       <td>Centers for Medicare & Medicaid Services, 18F, Navy</td>
     </tr>
@@ -116,6 +124,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
+      <td>✅</td>
       <td>Development status of the project</td>
       <td>
         - Ideation<br>
@@ -132,6 +141,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
+      <td>✅</td>
       <td>
         An object containing description of the usage/restrictions regarding the release.<br><br>
         An abbreviation for the name of the license. The URL of the release license.
@@ -143,6 +153,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
+      <td></td>
       <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByDisposableCode: The source code is disposable in nature, meaning it was written for a one-time or short-term purpose and is not intended to be reused or maintained; (12) exemptByExperimentalCode: The source code is solely exploratory in nature, including source code written by a developer experimenting with a new language or library, and is not intended for production or public reuse; (13) exemptByCommercialSoftware: The source code is commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software
       </td>
       <td>
@@ -166,14 +177,16 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>conditional (only if exempted)</td>
       <td>🇺🇸📜</td>
       <td>str</td>
+      <td></td>
       <td>If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</td>
       <td></td>
     </tr>
     <tr>
-      <td>reuseFrequency/forks <br> reuseFrequency/clones <br> reuseFrequency/downloads</td>
+      <td>reuseFrequency/forks <br> reuseFrequency/clones<br> reuseFrequency/downloads</td>
       <td>required</td>
       <td>📜</td>
       <td>obj</td>
+      <td>✅</td>
       <td>Measures frequency of code reuse in various forms such as forks and clones for repositories, and downloads for packaged and distributed software</td>
       <td></td>
     </tr>
@@ -182,6 +195,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
+      <td>✅</td>
       <td>The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions). It can be listed as 'private' for repositories that are closed.</td>
       <td></td>
     </tr>
@@ -190,6 +204,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>📜</td>
       <td>str</td>
+      <td>✅</td>
       <td>Visibility of repository</td>
       <td>
         - public<br>
@@ -201,6 +216,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>The URL of the public release homepage</td>
       <td></td>
     </tr>
@@ -209,6 +225,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td></td>
       <td>The URL where a distribution of the release can be found</td>
       <td></td>
     </tr>
@@ -217,6 +234,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td></td>
       <td>The URL where disclaimer language regarding the release can be found</td>
       <td></td>
     </tr>
@@ -225,6 +243,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td></td>
       <td>Short paragraph that includes disclaimer language to accompany the release</td>
       <td></td>
     </tr>
@@ -233,6 +252,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>Version control system used</td>
       <td>
         - git<br>
@@ -247,6 +267,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>int</td>
+      <td></td>
       <td>Labor hours invested in the project. Calculated through <a href="https://github.com/boyter/scc">COCOMO & SCC tool</a></td>
       <td></td>
     </tr>
@@ -255,6 +276,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>arr</td>
+      <td>✅</td>
       <td>Programming languages that make up the codebase</td>
       <td></td>
     </tr>
@@ -263,6 +285,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🌎📜</td>
       <td>str</td>
+      <td></td>
       <td>The dedicated staff that keeps the software up-to-date, if any</td>
       <td>
         - internal<br>
@@ -276,6 +299,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>📜</td>
       <td>array</td>
+      <td></td>
       <td>Contract number</td>
       <td></td>
     </tr>
@@ -284,6 +308,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM. If the software does not have a SBOM, enter 'None'. (i.e. Github provides an SBOM: https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)</td>
       <td></td>
     </tr>
@@ -292,6 +317,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
+      <td></td>
       <td>An array of affiliated government repositories that may be a part of the same project</td>
       <td>relatedCode for 'code-gov-front-end' would include 'code-gov-api' and 'code-gov-api-client'</td>
     </tr>
@@ -300,6 +326,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
+      <td></td>
       <td>An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release</td>
       <td>
         - US Web Design Standards<br>
@@ -314,6 +341,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
+      <td></td>
       <td>An array of objects including an acronym for each agency partnering on the release and the contact email at such agency</td>
       <td></td>
     </tr>
@@ -322,6 +350,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
+      <td>✅</td>
       <td>A date object describing the release</td>
       <td></td>
     </tr>
@@ -330,6 +359,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🇺🇸</td>
       <td>arr</td>
+      <td>✅</td>
       <td>Topics and keywords associated with the project to improve search and discoverability</td>
       <td></td>
     </tr>
@@ -338,6 +368,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
+      <td>✅ (email only)</td>
       <td>Point of contact for the release<br>Email of point of contact<br>Name of point of contact</td>
       <td></td>
     </tr>
@@ -346,6 +377,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>📜</td>
       <td>str</td>
+      <td>✅</td>
       <td>Method a repository receives feedback from the community (i.e. URL to GitHub repository issues page)</td>
       <td>
         - Submitting issues to repo<br>
@@ -356,15 +388,15 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>optional</td>
       <td>🌐</td>
       <td>str</td>
+      <td></td>
       <td>The software's ID in the AI Use Case Inventory. If the software is not currently listed in the inventory, enter '0'</td>
       <td>
       </td>
     </tr>
-
   </tbody>
 </table>
 
-Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
+Full schema can be found in [schema-0.1.0.json](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/schema-0.1.0.json).
 
 ### CMS code.json Fields
 
@@ -392,7 +424,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
     <tr>
       <td>CMS fields</td>
       <td>Agency</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
     </tr>
     <tr>
     <td><a href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih">SHARE IT Act</a></td>
@@ -402,6 +434,8 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
   </tbody>
 </table>
 
+A checkmark (✅) in the Automated column indicates a field populated through the GitHub API by [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator). Blank cells indicate fields outside that automation.
+
 <table>
   <thead>
     <tr>
@@ -409,6 +443,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <th>Presence</th>
       <th>Source</th>
       <th>Type</th>
+      <th>Automated</th>
       <th>Description</th>
       <th>Options/Examples</th>
     </tr>
@@ -419,6 +454,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>str</td>
+      <td>✅</td>
       <td>Name of the project or software</td>
       <td></td>
     </tr>
@@ -427,6 +463,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>📜</td>
       <td>str</td>
+      <td></td>
       <td>Persistent unique ID; tracks assets across renames/migrations</td>
       <td></td>
     </tr>
@@ -435,6 +472,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>The version for this release</td>
       <td></td>
     </tr>
@@ -443,6 +481,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>A short description of the project. It should be a single line containing a single sentence. Maximum 150 characters are allowed.</td>
       <td></td>
     </tr>
@@ -451,6 +490,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🌎</td>
       <td>str</td>
+      <td></td>
       <td>Provide longer description of the software, between 150 and 10000 chars. It is meant to provide an overview of the capabilities of the software for a potential user.</td>
       <td></td>
     </tr>
@@ -459,6 +499,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>The organization or component within the agency to which the releases listed belong.</td>
       <td>Centers for Medicare & Medicaid Services</td>
     </tr>
@@ -467,6 +508,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
+      <td>✅</td>
       <td>Development status of the project</td>
       <td>
         - Ideation<br>
@@ -483,6 +525,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
+      <td>✅</td>
       <td>
         An object containing description of the usage/restrictions regarding the release.<br><br>
         An abbreviation for the name of the license. The URL of the release license.
@@ -494,6 +537,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
+      <td></td>
       <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByDisposableCode: The source code is disposable in nature, meaning it was written for a one-time or short-term purpose and is not intended to be reused or maintained (e.g., a throwaway script or one-off utility); (12) exemptByExperimentalCode: The source code is solely exploratory in nature, including source code written by a developer experimenting with a new language or library, and is not intended for production or public reuse; (13) exemptByCommercialSoftware: The source code is commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software</td>
       <td>
         - openSource<br>
@@ -516,6 +560,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>conditional (only if exempted)</td>
       <td>🇺🇸📜</td>
       <td>str</td>
+      <td></td>
       <td>If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</td>
       <td></td>
     </tr>
@@ -524,6 +569,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>📜</td>
       <td>obj</td>
+      <td>✅</td>
       <td>Measures frequency of code reuse in various forms such as forks and clones for repositories, and downloads for packaged and distributed software</td>
       <td></td>
     </tr>
@@ -532,21 +578,22 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
+      <td>✅</td>
       <td>The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions). It can be listed as 'private' for repositories that are closed.</td>
       <td></td>
     </tr>
     <tr>
       <td>repositoryHost</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>str</td>
+      <td></td>
       <td>Location where source code is hosted</td>
       <td>
         - github.com/CMSgov<br>
         - github.com/CMS-Enterprise<br>
         - github.com/Enterprise-CMCS<br>
         - github.com/DSACMS<br>
-        - github.com/MeasureAuthoringTool<br>
         - github.cms.gov<br>
         - CCSQ GitHub
       </td>
@@ -556,6 +603,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>📜</td>
       <td>str</td>
+      <td>✅</td>
       <td>Visibility of repository</td>
       <td>
         - public<br>
@@ -567,6 +615,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>The URL of the public release homepage</td>
       <td></td>
     </tr>
@@ -575,6 +624,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td></td>
       <td>The URL where a distribution of the release can be found</td>
       <td></td>
     </tr>
@@ -583,6 +633,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td></td>
       <td>The URL where disclaimer language regarding the release can be found</td>
       <td></td>
     </tr>
@@ -591,6 +642,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td></td>
       <td>Short paragraph that includes disclaimer language to accompany the release</td>
       <td></td>
     </tr>
@@ -599,6 +651,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>Version control system used</td>
       <td>
         - git<br>
@@ -613,6 +666,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>int</td>
+      <td></td>
       <td>Labor hours invested in the project. Calculated through <a href="https://github.com/boyter/scc">COCOMO & SCC tool</a></td>
       <td></td>
     </tr>
@@ -621,6 +675,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🌎</td>
       <td>arr</td>
+      <td></td>
       <td>Platforms supported by the project</td>
       <td>
         - web<br>
@@ -637,6 +692,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🌎</td>
       <td>arr</td>
+      <td></td>
       <td>Categories the project belongs to.</td>
       <td>Select from: <a href="https://yml.publiccode.tools/categories-list.html">categories list</a></td>
     </tr>
@@ -645,6 +701,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🌎</td>
       <td>str</td>
+      <td></td>
       <td>Type of software</td>
       <td>
         - standalone/mobile<br>
@@ -663,6 +720,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>Programming languages that make up the codebase</td>
       <td></td>
     </tr>
@@ -671,6 +729,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🌎📜</td>
       <td>str</td>
+      <td></td>
       <td>The dedicated staff that keeps the software up-to-date, if any</td>
       <td>
         - internal<br>
@@ -684,6 +743,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>📜</td>
       <td>array</td>
+      <td></td>
       <td>Contract number</td>
       <td></td>
     </tr>
@@ -692,6 +752,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
+      <td>✅</td>
       <td>Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM. If the software does not have a SBOM, enter 'None'. (i.e. Github provides an SBOM: https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)</td>
       <td></td>
     </tr>
@@ -700,6 +761,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
+      <td></td>
       <td>An array of affiliated government repositories that may be a part of the same project</td>
       <td>relatedCode for 'code-gov-front-end' would include 'code-gov-api' and 'code-gov-api-client'</td>
     </tr>
@@ -708,6 +770,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
+      <td></td>
       <td>An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release</td>
       <td>
         - US Web Design Standards<br>
@@ -722,6 +785,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
+      <td></td>
       <td>An array of objects including an acronym for each agency partnering on the release and the contact email at such agency</td>
       <td></td>
     </tr>
@@ -730,6 +794,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>obj</td>
+      <td>✅</td>
       <td>A date object describing the release</td>
       <td></td>
     </tr>
@@ -738,6 +803,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>arr</td>
+      <td>✅</td>
       <td>Topics and keywords associated with the project to improve search and discoverability</td>
       <td></td>
     </tr>
@@ -746,6 +812,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
+      <td>✅ (email only)</td>
       <td>Point of contact for the release<br>Email of point of contact<br>Name of point of contact</td>
       <td></td>
     </tr>
@@ -754,6 +821,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>📜</td>
       <td>str</td>
+      <td>✅</td>
       <td>Method a repository receives feedback from the community (i.e. URL to GitHub repository issues)</td>
       <td>
         - Submitting issues to repo<br>
@@ -764,6 +832,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🌐</td>
       <td>str</td>
+      <td></td>
       <td>The software's ID in the AI Use Case Inventory. If the software is not currently listed in the inventory, enter '0'</td>
       <td>
       </td>
@@ -773,6 +842,7 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
       <td>required</td>
       <td>🌎</td>
       <td>bool</td>
+      <td></td>
       <td>Indicates if the project supports multiple languages</td>
       <td>
         - true<br>
@@ -782,8 +852,9 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
     <tr>
       <td>repositoryType</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>str</td>
+      <td></td>
       <td>Purpose and functionality of the repository</td>
       <td>
         - package<br>
@@ -799,8 +870,9 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
     <tr>
       <td>userInput</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>bool</td>
+      <td></td>
       <td>Does the software accept user input?</td>
       <td>
         - true<br>
@@ -810,8 +882,9 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
     <tr>
       <td>fismaLevel</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>str</td>
+      <td></td>
       <td>Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): <a href="https://security.cms.gov/learn/federal-information-security-modernization-act-fisma">link</a></td>
       <td>
         - low<br>
@@ -822,70 +895,70 @@ Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
     <tr>
       <td>group</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>str</td>
+      <td></td>
       <td>Home Department / Org / Group associated with the project</td>
       <td></td>
     </tr>
     <tr>
       <td>projects</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>arr</td>
+      <td></td>
       <td>Project(s) that is associated or related to the repository, if any.</td>
       <td>Bluebutton, MPSM, codejson</td>
     </tr>
     <tr>
       <td>systems</td>
       <td>optional</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>arr</td>
+      <td></td>
       <td>CMS systems that the repository interfaces with or depends on, if any.</td>
       <td>IDR, PECOS</td>
     </tr>
     <tr>
       <td>subsetInHealthcare</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>arr</td>
+      <td></td>
       <td>Healthcare-related subset</td>
       <td>
         - policy<br>
         - operational<br>
         - medicare<br>
-        - medicaid<br>
-        - SNAP<br>
-        - TANF<br>
-        - human-benefit-services
+        - medicaid
       </td>
     </tr>
     <tr>
       <td>userType</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>arr</td>
+      <td></td>
       <td>Types of users who interact with the software</td>
       <td>
         - providers<br>
         - patients<br>
-        - government<br>
-        - applicants<br>
-        - beneficiaries<br>
-        - enrollees
+        - government
       </td>
     </tr>
     <tr>
       <td>maturityModelTier</td>
       <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
       <td>int</td>
+      <td></td>
       <td>Maturity model tier</td>
       <td>0, 1, 2, 3, 4</td>
     </tr>
   </tbody>
 </table>
 
-Full schema can be found in [schema-2.2.0.json](../schemas/cms/schema-2.2.0.json).
+Full schema can be found in [schema-2.2.0.json](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/cms/schema-2.2.0.json).
 
 ### Adding new metadata fields
 
