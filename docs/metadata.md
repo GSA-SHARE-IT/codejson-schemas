@@ -1,5 +1,3 @@
-# Code.json
-
 `code.json` is a metadata standard created to collect information on the agency's software projects. This is composed of:
 
 - federal code.json standard, created as part of [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf)
@@ -10,7 +8,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
 
 The generic code.json schema can be found in the [`schemas` directory](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/schema-0.1.0.json).
 
-### Extending the schema for agency use
+## Extending the schema for agency use
 
 The generic schema is designed to be extensible, allowing agencies to add metadata fields that are relevant to their specific software inventorying needs.
 
@@ -18,7 +16,7 @@ For example, CMS has their [own schema](https://github.com/GSA-SHARE-IT/codejson
 
 We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/GSA-SHARE-IT/codejson-schemas/issues) to [include their extended schema in the repository](https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
-### code.json Fields
+## code.json Fields
 
 **Legend**
 
@@ -398,7 +396,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
 
 Full schema can be found in [schema-0.1.0.json](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/schema-0.1.0.json).
 
-### CMS code.json Fields
+## CMS code.json Fields
 
 **Legend**
 
@@ -960,6 +958,6 @@ A checkmark (✅) in the Automated column indicates a field populated through th
 
 Full schema can be found in [schema-2.2.0.json](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/schemas/cms/schema-2.2.0.json).
 
-### Adding new metadata fields
+## Adding new metadata fields
 
 For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/GSA-SHARE-IT/codejson-schemas/issues/new?template=metadata-field-addition.md).
