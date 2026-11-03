@@ -31,14 +31,14 @@ To create an agency-index.json:
   </thead>
   <tbody>
     <tr>
-      <td>agency</td>
+      <td><strong>agency <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>str</td>
       <td>The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual.</td>
       <td></td>
     </tr>
     <tr>
-      <td>measurementType/method</td>
+      <td><strong>measurementType/method <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>str</td>
       <td>An enumerated list of methods for measuring the open source requirement.</td>
@@ -52,28 +52,28 @@ To create an agency-index.json:
       </td>
     </tr>
     <tr>
-      <td>measurementType/ifOther</td>
+      <td>measurementType/ifOther <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>str</td>
       <td>A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</td>
       <td></td>
     </tr>
     <tr>
-      <td>releases</td>
+      <td><strong>releases <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>array</td>
       <td>An array of code.json objects containing each versioned source code release made available. </td>
       <td></td>
     </tr>
     <tr>
-      <td>version</td>
+      <td><strong>version <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>str</td>
       <td>The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org.</td>
       <td></td>
     </tr>
-  <tbody>
-<table>
+  </tbody>
+</table>
 
 View the agency-index.json schema here: https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas/agency-index/schema-2.0.0.json
 

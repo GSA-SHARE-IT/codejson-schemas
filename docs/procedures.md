@@ -6,7 +6,7 @@ The CMS Open Source Program Office developed various tools that can automate det
 
 **Procedures for Project Teams**:
 
-[Creating a code.json file in your repository](#creating-a-codejson-file-in-your-repository)
+[Creating a code.json file in your repository](#creating-a-code-json-file-in-your-repository)
 
 - [codejson-form](#using-codejson-form)
 - [codejson-action](#using-codejson-action)
@@ -14,13 +14,13 @@ The CMS Open Source Program Office developed various tools that can automate det
 
 **Procedures for Agencies**:
 
-[Generate an agency-index.json file for submission](#generate-an-agency-indexjson-file-for-agencies)
+[Generate an agency-index.json file for submission](#generate-an-agency-index-json-file-for-agencies)
 
 - [codejson-index](#using-codejson-index)
 
 [Tools created by other teams and agencies](#tools-created-by-other-teams-and-agencies)
 
-- [CMS CMCS](#cms-cmcs-codejson-aggregator)
+- [CMS CMCS](#cms-cmcs-code-json-aggregator)
 - [CDC](#cdc-share-it-act-repository-scanner-tool)
 
 ## Creating a code.json file in your repository
