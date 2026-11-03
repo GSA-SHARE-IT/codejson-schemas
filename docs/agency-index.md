@@ -1,6 +1,4 @@
-# agency-index.json
-
-The SHARE IT Act requires federal agencies to publish metadata for their software projects. This metadata is compiled into an **agency-index.json** file, which serves as a centralized inventory of the agency's software portfolio.
+The SHARE IT Act requires federal agencies to publish metadata for their software projects. This metadata is compiled into an `agency-index.json` file, which serves as a centralized inventory of the agency's software portfolio.
 
 ## Generate an agency-index.json file for submission
 
