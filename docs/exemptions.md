@@ -41,7 +41,7 @@ Before outbounding repositories, it’s important that the appropriate stakehold
   - [ ] solely exploratory in nature, including source code written by a developer experimenting with a new language or library
   - [ ] commercial computer software, commercial off-the-shelf (COTS) software, or configuration scripts for such software
 
-### M-25-21 Exemptions (for AI Code and Models)
+### [M-25-21 Exemptions](https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf) (for AI Code and Models)
 
 Agencies must also prioritize sharing AI code, models, and data government-wide, consistent with the [Open, Public, Electronic and Necessary (OPEN) Government Data Act](https://www.congress.gov/bill/115th-congress/house-bill/4174/text/eas#toc-HD4E1EFAE6EE64575A09DA8B3E2DAF936). Agencies, where practicable, must also release and maintain AI code [as open source software in public repository](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf), unless the:
 
