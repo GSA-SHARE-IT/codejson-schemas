@@ -75,7 +75,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
   </thead>
   <tbody>
     <tr>
-      <td>name</td>
+      <td><strong>name <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>str</td>
@@ -84,7 +84,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>identifier</td>
+      <td><strong>identifier <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>str</td>
@@ -93,7 +93,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>version</td>
+      <td>version <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -102,7 +102,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>description</td>
+      <td>description <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -111,7 +111,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>organization</td>
+      <td><strong>organization <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -120,7 +120,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td>Centers for Medicare & Medicaid Services, 18F, Navy</td>
     </tr>
     <tr>
-      <td>status</td>
+      <td><strong>status <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
@@ -137,7 +137,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       </td>
     </tr>
     <tr>
-      <td>permissions/license/url <br> permissions/license/name</td>
+      <td>permissions/license/url <small class="schema-optional">(optional)</small> <br> permissions/license/name <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
@@ -149,7 +149,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>permissions/usageType</td>
+      <td><strong>permissions/usageType <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
@@ -182,7 +182,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>reuseFrequency/forks <br> reuseFrequency/clones<br> reuseFrequency/downloads</td>
+      <td><strong>reuseFrequency/forks <span class="schema-required" aria-hidden="true">*</span></strong> <br> <strong>reuseFrequency/clones <span class="schema-required" aria-hidden="true">*</span></strong> <br> <strong>reuseFrequency/downloads <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>obj</td>
@@ -191,7 +191,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>repositoryURL</td>
+      <td><strong>repositoryURL <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
@@ -200,7 +200,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>repositoryVisibility</td>
+      <td><strong>repositoryVisibility <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>str</td>
@@ -212,7 +212,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       </td>
     </tr>
     <tr>
-      <td>homepageURL</td>
+      <td>homepageURL <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -221,7 +221,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>downloadURL</td>
+      <td>downloadURL <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -230,7 +230,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>disclaimerURL</td>
+      <td>disclaimerURL <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -239,7 +239,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>disclaimerText</td>
+      <td>disclaimerText <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -248,7 +248,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>vcs</td>
+      <td>vcs <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -263,7 +263,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       </td>
     </tr>
     <tr>
-      <td>laborHours</td>
+      <td>laborHours <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>int</td>
@@ -272,7 +272,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>languages</td>
+      <td>languages <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>arr</td>
@@ -281,7 +281,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>maintenance</td>
+      <td><strong>maintenance <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🌎📜</td>
       <td>str</td>
@@ -295,7 +295,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       </td>
     </tr>
     <tr>
-      <td>contractNumber</td>
+      <td><strong>contractNumber <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>array</td>
@@ -304,7 +304,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>SBOM</td>
+      <td>SBOM <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -313,7 +313,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
      <tr>
-      <td>relatedCode/name <br> relatedCode/URL <br> relatedCode/isGovernmentRepo</td>
+      <td>relatedCode/name <small class="schema-optional">(optional)</small> <br> relatedCode/URL <small class="schema-optional">(optional)</small> <br> relatedCode/isGovernmentRepo <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
@@ -322,7 +322,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td>relatedCode for 'code-gov-front-end' would include 'code-gov-api' and 'code-gov-api-client'</td>
     </tr>
     <tr>
-      <td>reusedCode/name <br> reusedCode/URL</td>
+      <td>reusedCode/name <small class="schema-optional">(optional)</small> <br> reusedCode/URL <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
@@ -337,7 +337,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       </td>
     </tr>
     <tr>
-      <td>partners/name <br> partners/email</td>
+      <td>partners/name <small class="schema-optional">(optional)</small> <br> partners/email <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
@@ -346,7 +346,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>date/created <br> date/lastModified date/metadataLastUpdated</td>
+      <td>date/created <small class="schema-optional">(optional)</small> <br> date/lastModified date/metadataLastUpdated <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
@@ -355,7 +355,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>tags</td>
+      <td>tags <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>arr</td>
@@ -364,7 +364,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>contact/email <br> contact/name</td>
+      <td><strong>contact/email <span class="schema-required" aria-hidden="true">*</span></strong> <br> <strong>contact/name <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
@@ -373,7 +373,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       <td></td>
     </tr>
     <tr>
-      <td>feedbackMechanism</td>
+      <td><strong>feedbackMechanism <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>str</td>
@@ -384,7 +384,7 @@ A checkmark (✅) in the _Automated_ column indicates a field populated through 
       </td>
     </tr>
     <tr>
-      <td>AIUseCaseID</td>
+      <td>AIUseCaseID <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🌐</td>
       <td>str</td>
@@ -450,7 +450,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
   </thead>
   <tbody>
     <tr>
-      <td>name</td>
+      <td><strong>name <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>str</td>
@@ -459,7 +459,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>identifier</td>
+      <td><strong>identifier <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>str</td>
@@ -468,7 +468,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>version</td>
+      <td>version <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -477,7 +477,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>description</td>
+      <td><strong>description <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -486,7 +486,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>longDescription</td>
+      <td><strong>longDescription <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🌎</td>
       <td>str</td>
@@ -495,7 +495,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>organization</td>
+      <td><strong>organization <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -504,7 +504,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td>Centers for Medicare & Medicaid Services</td>
     </tr>
     <tr>
-      <td>status</td>
+      <td><strong>status <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
@@ -521,7 +521,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>permissions/license/url <br> permissions/license/name</td>
+      <td><strong>permissions/license/url <span class="schema-required" aria-hidden="true">*</span></strong> <br> <strong>permissions/license/name <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
@@ -533,7 +533,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>permissions/usageType</td>
+      <td><strong>permissions/usageType <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
@@ -565,7 +565,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>reuseFrequency/forks <br> reuseFrequency/clones <br> reuseFrequency/downloads</td>
+      <td><strong>reuseFrequency/forks <span class="schema-required" aria-hidden="true">*</span></strong> <br> <strong>reuseFrequency/clones <span class="schema-required" aria-hidden="true">*</span></strong> <br> <strong>reuseFrequency/downloads <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>obj</td>
@@ -574,7 +574,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>repositoryURL</td>
+      <td><strong>repositoryURL <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
@@ -583,9 +583,9 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>repositoryHost</td>
+      <td><strong>repositoryHost <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>str</td>
       <td></td>
       <td>Location where source code is hosted</td>
@@ -599,7 +599,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>repositoryVisibility</td>
+      <td><strong>repositoryVisibility <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>str</td>
@@ -611,7 +611,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
         <tr>
-      <td>homepageURL</td>
+      <td>homepageURL <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -620,7 +620,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>downloadURL</td>
+      <td>downloadURL <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -629,7 +629,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>disclaimerURL</td>
+      <td>disclaimerURL <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -638,7 +638,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>disclaimerText</td>
+      <td>disclaimerText <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -647,7 +647,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>vcs</td>
+      <td><strong>vcs <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -662,7 +662,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>laborHours</td>
+      <td><strong>laborHours <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>int</td>
@@ -671,7 +671,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>platforms</td>
+      <td><strong>platforms <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🌎</td>
       <td>arr</td>
@@ -688,7 +688,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>categories</td>
+      <td><strong>categories <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🌎</td>
       <td>arr</td>
@@ -697,7 +697,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td>Select from: <a href="https://yml.publiccode.tools/categories-list.html">categories list</a></td>
     </tr>
     <tr>
-      <td>softwareType</td>
+      <td><strong>softwareType <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🌎</td>
       <td>str</td>
@@ -716,7 +716,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>languages</td>
+      <td><strong>languages <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -725,7 +725,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>maintenance</td>
+      <td><strong>maintenance <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🌎📜</td>
       <td>str</td>
@@ -739,7 +739,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>contractNumber</td>
+      <td><strong>contractNumber <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>array</td>
@@ -748,7 +748,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>SBOM</td>
+      <td><strong>SBOM <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -757,7 +757,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
      <tr>
-      <td>relatedCode/name <br> relatedCode/URL <br> relatedCode/isGovernmentRepo</td>
+      <td>relatedCode/name <small class="schema-optional">(optional)</small> <br> relatedCode/URL <small class="schema-optional">(optional)</small> <br> relatedCode/isGovernmentRepo <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
@@ -766,7 +766,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td>relatedCode for 'code-gov-front-end' would include 'code-gov-api' and 'code-gov-api-client'</td>
     </tr>
     <tr>
-      <td>reusedCode/name <br> reusedCode/URL</td>
+      <td>reusedCode/name <small class="schema-optional">(optional)</small> <br> reusedCode/URL <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
@@ -781,7 +781,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>partners/name <br> partners/email</td>
+      <td>partners/name <small class="schema-optional">(optional)</small> <br> partners/email <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
       <td>🇺🇸</td>
       <td>obj</td>
@@ -790,7 +790,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>date/created <br> date/lastModified date/metadataLastUpdated</td>
+      <td><strong>date/created <span class="schema-required" aria-hidden="true">*</span></strong> <br> <strong>date/lastModified date/metadataLastUpdated <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>obj</td>
@@ -799,7 +799,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>tags</td>
+      <td><strong>tags <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>arr</td>
@@ -808,7 +808,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>contact/email <br> contact/name</td>
+      <td><strong>contact/email <span class="schema-required" aria-hidden="true">*</span></strong> <br> <strong>contact/name <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
@@ -817,7 +817,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       <td></td>
     </tr>
     <tr>
-      <td>feedbackMechanism</td>
+      <td><strong>feedbackMechanism <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>📜</td>
       <td>str</td>
@@ -828,7 +828,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>AIUseCaseID</td>
+      <td><strong>AIUseCaseID <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🌐</td>
       <td>str</td>
@@ -838,7 +838,7 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>localisation</td>
+      <td><strong>localisation <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>🌎</td>
       <td>bool</td>
@@ -850,9 +850,9 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>repositoryType</td>
+      <td><strong>repositoryType <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>str</td>
       <td></td>
       <td>Purpose and functionality of the repository</td>
@@ -868,9 +868,9 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>userInput</td>
+      <td><strong>userInput <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>bool</td>
       <td></td>
       <td>Does the software accept user input?</td>
@@ -880,9 +880,9 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>fismaLevel</td>
+      <td><strong>fismaLevel <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>str</td>
       <td></td>
       <td>Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): <a href="https://security.cms.gov/learn/federal-information-security-modernization-act-fisma">link</a></td>
@@ -893,36 +893,36 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>group</td>
+      <td><strong>group <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>str</td>
       <td></td>
       <td>Home Department / Org / Group associated with the project</td>
       <td></td>
     </tr>
     <tr>
-      <td>projects</td>
+      <td><strong>projects <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>arr</td>
       <td></td>
       <td>Project(s) that is associated or related to the repository, if any.</td>
       <td>Bluebutton, MPSM, codejson</td>
     </tr>
     <tr>
-      <td>systems</td>
+      <td>systems <small class="schema-optional">(optional)</small></td>
       <td>optional</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>arr</td>
       <td></td>
       <td>CMS systems that the repository interfaces with or depends on, if any.</td>
       <td>IDR, PECOS</td>
     </tr>
     <tr>
-      <td>subsetInHealthcare</td>
+      <td><strong>subsetInHealthcare <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>arr</td>
       <td></td>
       <td>Healthcare-related subset</td>
@@ -934,9 +934,9 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>userType</td>
+      <td><strong>userType <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>arr</td>
       <td></td>
       <td>Types of users who interact with the software</td>
@@ -947,9 +947,9 @@ A checkmark (✅) in the Automated column indicates a field populated through th
       </td>
     </tr>
     <tr>
-      <td>maturityModelTier</td>
+      <td><strong>maturityModelTier <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
-      <td><img src="/../assets/schema/img/cms-logo.jpg" class="cms-logo" alt="CMS Logo" loading="lazy" decoding="async"></td>
+      <td>{% image_with_class "assets/schema/img/cms-logo.jpg" "cms-logo" "CMS Logo" %}</td>
       <td>int</td>
       <td></td>
       <td>Maturity model tier</td>
