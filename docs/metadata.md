@@ -57,7 +57,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
   </tbody>
 </table>
 
-A checkmark (✅) in the _Automated_ column indicates a field populated through the GitHub API by [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator).
+A checkmark (✅) in the _Automated_ column indicates a field populated through the GitHub API by [codejson-action](https://github.com/GSA-SHARE-IT/codejson-action).
 
 <table>
   <thead>
@@ -432,7 +432,7 @@ Full schema can be found in [schema-0.1.0.json](https://github.com/GSA-SHARE-IT/
   </tbody>
 </table>
 
-A checkmark (✅) in the Automated column indicates a field populated through the GitHub API by [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator). Blank cells indicate fields outside that automation.
+A checkmark (✅) in the _Automated_ column indicates a field populated through the GitHub API by [codejson-action](https://github.com/GSA-SHARE-IT/codejson-action).
 
 <table>
   <thead>
