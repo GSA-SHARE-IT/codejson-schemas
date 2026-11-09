@@ -1,13 +1,11 @@
-# agency-index.json
-
-The SHARE IT Act requires federal agencies to publish metadata for their software projects. This metadata is compiled into an **agency-index.json** file, which serves as a centralized inventory of the agency's software portfolio.
+The SHARE IT Act requires federal agencies to publish metadata for their software projects. This metadata is compiled into an `agency-index.json` file, which serves as a centralized inventory of the agency's software portfolio.
 
 ## Generate an agency-index.json file for submission
 
 To create an agency-index.json:
 
 1. Identify GitHub organizations and other platforms where source code is hosted
-2. Generate the agency-index.json using the tools below. Learn more about usage in [procedures.md](https://github.com/GSA-SHARE-IT/codejson-schemas/blob/main/docs/procedures.md#generate-an-agency-indexjson-file-for-agencies)
+2. Generate the agency-index.json using the tools below. Learn more about usage in the [procedures page](https://gsa-share-it.github.io/site/schema/procedures/#generate-an-agency-index-json-file-for-agencies)
 
 - [codejson-index website](https://gsa-share-it.github.io/codejson-index/)
 - [codejson-index python tool](https://github.com/GSA-SHARE-IT/codejson-index)
@@ -31,7 +29,7 @@ To create an agency-index.json:
   </thead>
   <tbody>
     <tr>
-      <td>agency</td>
+      <td><strong>agency <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>str</td>
       <td>The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual.</td>
@@ -45,14 +43,14 @@ To create an agency-index.json:
       <td></td>
     </tr>
     <tr>
-      <td>version</td>
+      <td><strong>version <span class="schema-required" aria-hidden="true">*</span></strong></td>
       <td>required</td>
       <td>str</td>
       <td>The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org.</td>
       <td></td>
     </tr>
-  <tbody>
-<table>
+  </tbody>
+</table>
 
 View the agency-index.json schema here: https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas/agency-index/schema-2.0.0.json
 

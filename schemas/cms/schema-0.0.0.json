@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://gsa-share-it.github.io/codejson-schemas/schemas/cms/schema-0.0.0.json",
     "title": "CMS Code.json Metadata",
     "description": "A metadata standard for software repositories of CMS",
     "type": "object",

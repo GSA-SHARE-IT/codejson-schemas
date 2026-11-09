@@ -6,6 +6,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - docs/metadata.md
+      - docs/faq.md
+      - docs/exemptions.md
+      - docs/procedures.md
+      - docs/agency-index.md
   workflow_dispatch:
 jobs:
   sync:

@@ -1,12 +1,8 @@
-# Procedures
-
 The CMS Open Source Program Office developed various tools that can automate detecting, adding, and updating metadata to repositories.
-
-> **Learn more about our SHARE IT Act tools**: https://dsacms.github.io/share-it-act-lp/
 
 **Procedures for Project Teams**:
 
-[Creating a code.json file in your repository](#creating-a-codejson-file-in-your-repository)
+[Creating a code.json file in your repository](#creating-a-code-json-file-in-your-repository)
 
 - [codejson-form](#using-codejson-form)
 - [codejson-action](#using-codejson-action)
@@ -14,13 +10,13 @@ The CMS Open Source Program Office developed various tools that can automate det
 
 **Procedures for Agencies**:
 
-[Generate an agency-index.json file for submission](#generate-an-agency-indexjson-file-for-agencies)
+[Generate an agency-index.json file for submission](#generate-an-agency-index-json-file-for-agencies)
 
 - [codejson-index](#using-codejson-index)
 
 [Tools created by other teams and agencies](#tools-created-by-other-teams-and-agencies)
 
-- [CMS CMCS](#cms-cmcs-codejson-aggregator)
+- [CMS CMCS](#cms-cmcs-code-json-aggregator)
 - [CDC](#cdc-share-it-act-repository-scanner-tool)
 
 ## Creating a code.json file in your repository
@@ -29,7 +25,7 @@ The CMS Open Source Program Office developed various tools that can automate det
 
 _This method works best for all repositories on all platforms._
 
-Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-form.
+Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://gsa-share-it.github.io/codejson-form.
 
 ### Using codejson-action
 
@@ -37,10 +33,59 @@ _This method works best for repositories hosted on GitHub with GitHub Actions en
 
 The [codejson-action](https://github.com/GSA-SHARE-IT/codejson-action) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates metadata calculations, including:
 
-- Labor hours
-- Programming languages used
 - Repository information
+- Programming languages used
 - Timestamps
+
+#### Setting up the GitHub Action
+
+To use the codejson-action in your repository, create a workflow file with the following configuration:
+
+```yaml
+name: Update Code.json
+on:
+  schedule:
+    - cron: 0 0 1 * * # First day of every month
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - "code.json"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  update-code-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Update code.json
+        id: update
+        uses: DSACMS/automated-codejson-generator@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_PAT }} # PAT with admin/push permissions
+          BRANCH: "main"
+          SKIP_PR: "true"
+
+      - name: Report update method
+        run: |
+          echo "Update successful: ${{ steps.update.outputs.updated }}"
+          if [ "${{ steps.update.outputs.method_used }}" = "direct_push" ]; then
+            echo "Direct push successful! Commit SHA: ${{ steps.update.outputs.commit_sha }}"
+          elif [ "${{ steps.update.outputs.method_used }}" = "pull_request" ]; then
+            echo "Created pull request: ${{ steps.update.outputs.pr_url }}"
+          fi
+```
+
+This action will create a pull request to add or update a compliant code.json file in your repository.
 
 ### Using repo-scaffolder
 
@@ -55,49 +100,6 @@ cookiecutter . --directory=codejson
 ```
 
 For more information on repo-scaffolder, check out the [documentation](https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#metadata-collection-using-codejson).
-
-#### Setting up the GitHub Action
-
-To use the codejson-action in your repository, create a workflow file with the following configuration:
-
-```yaml
-name: Update Code.json
-on:
-  workflow_dispatch:
-
-permissions:
-  contents: write
-  pull-requests: write
-
-jobs:
-  update-code-json:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Setup Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: "1.22"
-
-      - name: Install SCC
-        run: go install github.com/boyter/scc/v3@latest
-
-      - name: Update code.json
-        uses: DSACMS/automated-codejson-generator@main
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
-This action will create a pull request to add or update a compliant code.json file in your repository.
 
 ## Generate an agency-index.json file for agencies
 
@@ -166,11 +168,12 @@ Below are tools other teams and agencies developed to create a consolidated soft
 ### CMS CMCS code.json aggregator
 
 mac-fc-aggregate-codejson aggregates code.json files from all private and internal repositories in a GitHub organization.
-https://github.com/Enterprise-CMCS/mac-fc-aggregate-code-json
+
+Repository: [https://github.com/Enterprise-CMCS/mac-fc-aggregate-code-json](https://github.com/Enterprise-CMCS/mac-fc-aggregate-code-json)
 
 ## CDC SHARE IT Act Repository Scanner Tool
 
 The CDC SHARE IT Act Repository Scanner Tool gathers and consolidates repository metadata from various code environments by generating code.json files in all repositories, having project teams review and correct information for accuracy, then creating an index file containing all aggregated code.json metadata.
 
-- https://github.com/CDCgov/ShareIT-Act
-- https://github.com/OCIO-ricky/ShareITAct_RepoScanning
+- CDC SHARE IT Act Index Repository: [https://github.com/CDCgov/ShareIT-Act](https://github.com/CDCgov/ShareIT-Act)
+- Repository Scanner Tool: [https://github.com/OCIO-ricky/ShareITAct_RepoScanning](https://github.com/OCIO-ricky/ShareITAct_RepoScanning)
