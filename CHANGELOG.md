@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the `code.json` schemas in this repository — the generic, government-wide schema (`schemas/schema-*.json`) and the CMS-specific schema (`schemas/cms/schema-*.json`) — are documented in this file, so changes are easy to track across releases.
+All notable changes to the `code.json` schemas in this repository — the generic, government-wide schema (`schemas/schema-*.json`), the CMS-specific schema (`schemas/cms/schema-*.json`), and the agency-index schema (`schemas/agency-index/schema-*.json`) — are documented in this file, so changes are easy to track across releases.
 
 This project follows a `major.minor.patch`-style versioning scheme for each schema file. Dates are approximate (based on file history) where not otherwise known.
 
