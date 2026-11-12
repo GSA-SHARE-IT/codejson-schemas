@@ -4,7 +4,7 @@ All notable changes to the `code.json` schemas in this repository — the generi
 
 This project follows a `major.minor.patch`-style versioning scheme for each schema file. Dates are approximate (based on file history) where not otherwise known.
 
-## code.json Government-Wide Generic Schema
+## Government-Wide `code.json ` Generic Schema
 
 ### [schema-0.1.0.json](./schemas/schema-0.1.0.json)
 
@@ -62,7 +62,7 @@ Initial generic (government-wide) `code.json` schema (`draft-04`). Known issues,
 - `permissions.usageType` is a single `string` value (not an array), so only one exemption reason could be declared per release, with a smaller 8-value exemption enum (`openSource`, `governmentWideReuse`, `exemptByLaw`, `exemptByNationalSecurity`, `exemptByAgencySystem`, `exemptByAgencyMission`, `exemptByCIO`, `exemptByPolicyDate`).
 - `organization` was restricted to a CMS-only enum value (`Centers for Medicare & Medicaid Services`), despite this being the generic, agency-agnostic schema.
 
-## Agency code.json Schemas
+## Agency `code.json` Schemas
 
 ### CMS code.json Schema
 
@@ -132,3 +132,29 @@ Initial generic (government-wide) `code.json` schema (`draft-04`). Known issues,
 #### [0.0.0](/schemas/cms/schema-0.0.0.json)
 
 Initial CMS `code.json` schema (`draft-04`). Note: this version has a known structural issue — field definitions are nested under `properties.items` instead of directly under `properties`, so the schema does not validate `name`, `status`, etc. as intended.
+
+## `agency-index.json` Schema
+
+### [1.0.0](/schemas/agency-index/schema-1.0.0.json)
+
+> [!IMPORTANT]  
+> This is the latest up-to-date schema for agency-index.json files.
+
+##### Added
+
+- `agency` field now uses an `enum` constraint with valid Clinger Cohen Act agency acronyms, ensuring data consistency and validation. Valid values include: USDA, DOC, DOD, ED, DOE, HHS, HUD, DHS, DOI, DOJ, DOL, DOS, DOT, TREASURY, VA, CFPB, EPA, FEC, GSA, NARA, NASA, NRC, NSF, OPM, SBA, SSA, USAID.
+
+##### Changed
+
+- `description` updated from "Agency source code catalog" to "A centralized inventory of an agency's software portfolio" for clarity.
+- `$id` field removed from schema (no longer explicitly defined).
+- `measurementType` object removed entirely — this field is no longer part of the schema as a result of the pilot program ending and SHARE IT Act requirements superceding.
+- `required` array simplified from `["version", "measurementType", "agency", "releases"]` to `["version", "agency", "releases"]`.
+
+##### Removed
+
+- `measurementType` property removed completely as a result of the pilot program ending and SHARE IT Act requirements superceding. This object previously contained `method` and `ifOther` fields for specifying how the open source requirement was measured.
+
+### [0.1.0](/schemas/agency-index/schema-0.1.0.json)
+
+Initial agency-index.json schema established as part of the [M-16-21 Federal Source Code Policy](https://github.com/GSA/code-gov-data). Includes `agency`, `releases`, and `version` as required fields. The `agency` field accepts any string value (no enum constraint). M-16-21 required federal agencies, as part of a three-year pilot program, to release at least 20% of new custom-developed source code to the public as Open Source Software. `measurementType` field was created to track this and dictate the method in which this is measured ("linesOfCode", "modules", "cost", "projects", "systems", "other")
