@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Agency Source Code Inventory",
-    "description": "Agency source code catalog",
+    "description": "A centralized inventory of an agency's software portfolio",
     "type": "object",
     "required": [
         "version",
@@ -11,7 +11,36 @@
     "properties": {
         "agency": {
             "description": "The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual.",
-            "type": "string"
+            "type": "string",
+            "enum": [
+                "USDA",
+                "DOC",
+                "DOD",
+                "ED",
+                "DOE",
+                "HHS",
+                "HUD",
+                "DHS",
+                "DOI",
+                "DOJ",
+                "DOL",
+                "DOS",
+                "DOT",
+                "TREASURY",
+                "VA",
+                "CFPB",
+                "EPA",
+                "FEC",
+                "GSA",
+                "NARA",
+                "NASA",
+                "NRC",
+                "NSF",
+                "OPM",
+                "SBA",
+                "SSA",
+                "USAID"
+            ]
         },
         "releases": {
             "type": "array",
@@ -20,7 +49,7 @@
                 "description": "A code.json object containing each versioned source code release made available.",
                 "allOf": [
                     {
-                        "$ref": "../schema-2.0.0.json"
+                        "$ref": "https://gsa-share-it.github.io/codejson-schemas/schemas/schema-0.1.0.json"
                     }
                 ]
             },

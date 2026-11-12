@@ -33,7 +33,35 @@ To create an agency-index.json:
       <td>required</td>
       <td>str</td>
       <td>The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual.</td>
-      <td></td>
+      <td>
+        - USDA<br>
+        - DOC<br>
+        - DOD<br>
+        - ED<br>
+        - DOE<br>
+        - HHS<br>
+        - HUD<br>
+        - DHS<br>
+        - DOI<br>
+        - DOJ<br>
+        - DOL<br>
+        - DOS<br>
+        - DOT<br>
+        - TREASURY<br>
+        - VA<br>
+        - CFPB<br>
+        - EPA<br>
+        - FEC<br>
+        - GSA<br>
+        - NARA<br>
+        - NASA<br>
+        - NRC<br>
+        - NSF<br>
+        - OPM<br>
+        - SBA<br>
+        - SSA<br>
+        - USAID
+      </td>
     </tr>
     <tr>
       <td>releases</td>
@@ -52,6 +80,6 @@ To create an agency-index.json:
   </tbody>
 </table>
 
-View the agency-index.json schema here: https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas/agency-index/schema-2.0.0.json
+View the agency-index.json schema here: https://github.com/GSA-SHARE-IT/codejson-schemas/tree/main/schemas/agency-index/schema-1.0.0.json
 
 More examples of agency index files can be found here: https://github.com/DSACMS/code-gov/tree/main/agency-indexes
