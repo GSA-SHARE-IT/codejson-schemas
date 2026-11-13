@@ -1,10 +1,10 @@
 # Changelog
 
-All notable changes to the `code.json` schemas in this repository — the generic, government-wide schema (`schemas/schema-*.json`) and the CMS-specific schema (`schemas/cms/schema-*.json`) — are documented in this file, so changes are easy to track across releases.
+All notable changes to the `code.json` schemas in this repository — the generic, government-wide schema (`schemas/schema-*.json`), the CMS-specific schema (`schemas/cms/schema-*.json`), and the agency-index schema (`schemas/agency-index/schema-*.json`) — are documented in this file, so changes are easy to track across releases.
 
 This project follows a `major.minor.patch`-style versioning scheme for each schema file. Dates are approximate (based on file history) where not otherwise known.
 
-## Government-Wide Generic Schema
+## Government-Wide `code.json ` Generic Schema
 
 ### [schema-0.1.0.json](./schemas/schema-0.1.0.json)
 
@@ -62,20 +62,21 @@ Initial generic (government-wide) `code.json` schema (`draft-04`). Known issues,
 - `permissions.usageType` is a single `string` value (not an array), so only one exemption reason could be declared per release, with a smaller 8-value exemption enum (`openSource`, `governmentWideReuse`, `exemptByLaw`, `exemptByNationalSecurity`, `exemptByAgencySystem`, `exemptByAgencyMission`, `exemptByCIO`, `exemptByPolicyDate`).
 - `organization` was restricted to a CMS-only enum value (`Centers for Medicare & Medicaid Services`), despite this being the generic, agency-agnostic schema.
 
-## Agency Schemas
+## Agency `code.json` Schemas
 
-### CMS Schema
+### CMS code.json Schema
 
-### [2.2.0](/schemas/cms/schema-2.2.0.json)
+#### [2.2.0](/schemas/cms/schema-2.2.0.json)
+
 > [!IMPORTANT]  
 > This is the latest up-to-date schema that reflects recent government policy updates (the SHARE IT Act).
 
-#### Added
+##### Added
 
 - `identifier` field — a persistent unique ID used to track an asset across renames/migrations. Added to `properties` (right after `name`) and to `required`.
 - `downloads` property added to `reuseFrequency.properties`, alongside the existing `forks` and `clones`.
 
-#### Changed
+##### Changed
 
 - `permissions.usageType`
   - enum: M-16-21 exemptions are removed from the schema: `exemptByIPRestriction`, `exemptByAgencySystem`, `exemptByAgencyMission`, `exemptByCIO`, and `exemptByPolicyDate`
@@ -83,51 +84,77 @@ Initial generic (government-wide) `code.json` schema (`draft-04`). Known issues,
   - Updated the `usageType` description text to define and renumber all 13 enum values to match.
 - Reworded the `reuseFrequency` description for clarity: _"Measures frequency of code reuse in various forms such as forks and clones for repositories, and downloads for packaged and distributed software."_
 
-### [2.1.0](/schemas/cms/schema-2.1.0.json)
+#### [2.1.0](/schemas/cms/schema-2.1.0.json)
 
-#### Changed (enum value additions only — no properties added/removed)
+##### Changed (enum value additions only — no properties added/removed)
 
 - `repositoryHost`: added `github.com/MeasureAuthoringTool`.
 - `subsetInHealthcare`: added `SNAP`, `TANF`, `human-benefit-services`.
 - `userType`: added `applicants`, `beneficiaries`, `enrollees`.
 
-### [2.0.0](/schemas/cms/schema-2.0.0.json)
+#### [2.0.0](/schemas/cms/schema-2.0.0.json)
 
-#### Added
+##### Added
 
 - `version`, `homepageURL`, `downloadURL`, `disclaimerURL`, `disclaimerText`, `relatedCode`, `reusedCode`, `partners` added as optional fields, taken from original [M-16-21 code.json schema](https://github.com/GSA/code-gov-data/tree/master/schemas)
 
-#### Removed
+##### Removed
 
 - `projectURL` (superseded by `homepageURL`/`downloadURL`).
 
-### [0.2.0](/schemas/cms/schema-0.2.0.json)
+#### [0.2.0](/schemas/cms/schema-0.2.0.json)
 
-#### Added
+##### Added
 
 - `feedbackMechanism` (singular).
 - `AIUseCaseID` added for assisting with agency collection of their AI Use Case Inventory as part of M-25-21 compliance
 - `SBOM` added to include software's SBOM in metadata as part of EO 14028
 
-#### Removed
+##### Removed
 
 - `feedbackMechanisms` (plural, replaced by singular `feedbackMechanism`), `upstream`.
 
-#### Changed
+##### Changed
 
 - Migrated `$schema` dialect from `draft-04` to `2020-12` and introduced a formal `$id` (`https://dsacms.github.io/code-json-schema.json`).
 
-### [0.1.0](/schemas/cms/schema-0.1.0.json)
+#### [0.1.0](/schemas/cms/schema-0.1.0.json)
 
-#### Added
+##### Added
 
 - `contractNumber`, `feedbackMechanisms` `repositoryVisibility`, `reuseFrequency` added as required metadata fields as per the SHARE IT Act
 - `projectURL`, `projects`, `systems`, `upstream` added to better track repository's relationship with its project, CMS systems, and dependencies
 
-#### Fixed
+##### Fixed
 
 - Corrected a structural bug from `0.0.0` where all field definitions were incorrectly nested one level too deep under a top-level `items` key instead of directly under `properties`.
 
-### [0.0.0](/schemas/cms/schema-0.0.0.json)
+#### [0.0.0](/schemas/cms/schema-0.0.0.json)
 
 Initial CMS `code.json` schema (`draft-04`). Note: this version has a known structural issue — field definitions are nested under `properties.items` instead of directly under `properties`, so the schema does not validate `name`, `status`, etc. as intended.
+
+## `agency-index.json` Schema
+
+### [1.0.0](/schemas/agency-index/schema-1.0.0.json)
+
+> [!IMPORTANT]  
+> This is the latest up-to-date schema for agency-index.json files.
+
+##### Added
+
+- `agency` field now uses an `enum` constraint with valid Clinger Cohen Act agency acronyms, ensuring data consistency and validation. Valid values include: USDA, DOC, DOD, ED, DOE, HHS, HUD, DHS, DOI, DOJ, DOL, DOS, DOT, TREASURY, VA, CFPB, EPA, FEC, GSA, NARA, NASA, NRC, NSF, OPM, SBA, SSA, USAID.
+
+##### Changed
+
+- `description` updated from "Agency source code catalog" to "A centralized inventory of an agency's software portfolio" for clarity.
+- `$id` field removed from schema (no longer explicitly defined).
+- `measurementType` object removed entirely — this field is no longer part of the schema as a result of the pilot program ending and SHARE IT Act requirements superceding.
+- `required` array simplified from `["version", "measurementType", "agency", "releases"]` to `["version", "agency", "releases"]`.
+
+##### Removed
+
+- `measurementType` property removed completely as a result of the pilot program ending and SHARE IT Act requirements superceding. This object previously contained `method` and `ifOther` fields for specifying how the open source requirement was measured.
+
+### [0.1.0](/schemas/agency-index/schema-0.1.0.json)
+
+Initial agency-index.json schema established as part of the [M-16-21 Federal Source Code Policy](https://github.com/GSA/code-gov-data). Includes `agency`, `releases`, and `version` as required fields. The `agency` field accepts any string value (no enum constraint). M-16-21 required federal agencies, as part of a three-year pilot program, to release at least 20% of new custom-developed source code to the public as Open Source Software. `measurementType` field was created to track this and dictate the method in which this is measured ("linesOfCode", "modules", "cost", "projects", "systems", "other")

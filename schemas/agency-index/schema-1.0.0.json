@@ -1,0 +1,64 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Agency Source Code Inventory",
+    "description": "A centralized inventory of an agency's software portfolio",
+    "type": "object",
+    "required": [
+        "version",
+        "agency",
+        "releases"
+    ],
+    "properties": {
+        "agency": {
+            "description": "The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual.",
+            "type": "string",
+            "enum": [
+                "USDA",
+                "DOC",
+                "DOD",
+                "ED",
+                "DOE",
+                "HHS",
+                "HUD",
+                "DHS",
+                "DOI",
+                "DOJ",
+                "DOL",
+                "DOS",
+                "DOT",
+                "TREASURY",
+                "VA",
+                "CFPB",
+                "EPA",
+                "FEC",
+                "GSA",
+                "NARA",
+                "NASA",
+                "NRC",
+                "NSF",
+                "OPM",
+                "SBA",
+                "SSA",
+                "USAID"
+            ]
+        },
+        "releases": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "description": "A code.json object containing each versioned source code release made available.",
+                "allOf": [
+                    {
+                        "$ref": "https://gsa-share-it.github.io/codejson-schemas/schemas/schema-0.1.0.json"
+                    }
+                ]
+            },
+            "description": "An array of code.json objects containing each versioned source code release made available.",
+            "additionalProperties": false
+        },
+        "version": {
+            "description": "The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org.",
+            "type": "string"
+        }
+    }
+}
